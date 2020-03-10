@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #636161f3;">
+    <div id="logo" style="height: 122px; background-color: #333333; border: blue 2px solid;">
+        <div id="ladoesq" style="float: left; height: 122px; width: 44%;"></div>
+        <img src="Nome.png" alt="" style="width: 220px; height: 130px;">
+    </div>
+    <div id="descricao">
+        <div id="ladoesq3" style="float: left; height: 90px; width: 16%;"></div>
+        <div id="ladoesq2" style="float: left; height: 45px; width: 28%;"></div>
+        <h1 style="color: white;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Seja bem
+            vindo,</h1>
+        <h4 style="color: white;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Somos a Fungi
+            System trazemos solução com IoT para Combater o desperdício, visando
+            reutilização e sustentabilidade por meio da tecnologia.</h4>
+    </div>
+    <br>
+    <div id="principal">
+        <div id="ladoesq5" style="float:right; width: 40%;"></div>
+        <div id="ladoesq4" style="float: left; height: 300px; width: 40%;"></div>
+        <div id="main"
+            style="border: blue solid 2px;width: 25%; height: 300px; background-color: #333333; float: left;">
+            <div style="float: left; height: 80px; width: 40%;"></div>
+            <img src="Logo.png" alt="" style="height: 80px; width: 80px; float: left;">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div style="float: left; height: 100px; width: 7%;"></div>
+            <span style="color: white;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+                id="texto">Digite o tamanho de sua plantação (Em m²)</span>
+            <div id="mensagem"
+                style="display: none; color: white;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            </div>
+            <div style="float: left; height: 140px; width: 15%;"></div>
+            <input type="number" id="metro" placeholder="Ex.: 100">
+
+            <br>
+            <br>
+            <div style="float: left; height: 30px; width: 10%;"></div>
+            <button onclick="calculo()" id="botaocalculo">Calcular valor</button>
+            <button onclick="voltar()" id="botaovoltar"
+                style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;display: none;">Calcular
+                novamente</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="fim" style="height: 90px; background-color: #333333; border: blue 2px solid;">
+        <div id="ladoesq6" style="float: left; height:1%; width: 4%;"></div>
+        <img src="Logo.png" alt="" style="height: 80px; width: 80px; float: left;">
+        <div id="ladoesq7" style="float: left; height:100%; width: 35%;"></div>
+        <br>
+        <span
+            style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">xxxxxxxxxx@bandtec.com.br</span>
+        <br>
+        <span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">(11)
+            xxxxx-xxxx</span>
+        <br>
+        <span style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">(11)
+            xxxx-xxxx</span>
+    </div>
+</body>
+
+</html>
+<script>
+    function calculo() {
+        var calc = Number(metro.value) * 45;
+
+        mensagem.innerHTML = `O valor sairá apartir de <u>R$${calc}</u><br>
+        <b>Para mais informações entre em contato conosco atravez do nosso telefone</b>`;
+
+        texto.style.display = 'none';
+        metro.style.display = 'none';
+        botaocalculo.style.display = 'none';
+        mensagem.style.display = 'block';
+        botaovoltar.style.display = 'block';
+    }
+    function voltar() {
+        texto.style.display = 'block';
+        metro.style.display = 'block';
+        metro.value = "";
+        botaocalculo.style.display = 'block';
+        mensagem.style.display = 'none';
+        botaovoltar.style.display = 'none';
+
+    }
+</script>
